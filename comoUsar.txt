@@ -25,6 +25,10 @@ cd /workspaces/processador_e_montador/montador-main/Simulator_Source
 
 g++ -std=c++11 main.cpp Controller.cpp Model.cpp Sound.cpp View.cpp $(pkg-config --cflags --libs gtk+-2.0 sdl2) -lGL -lm -o saida
 
+windows:
+g++ -std=c++11 main.cpp Controller.cpp Model.cpp Sound.cpp View.cpp $(pkg-config --cflags --libs gtk+-2.0 sdl2) -lopengl32 -o saida.exe
+
+
 apenas github space
 
 DISPLAY=:1 LIBGL_ALWAYS_SOFTWARE=1 ./saida genius.mif charmap.mif
